@@ -7,24 +7,23 @@
     font-weight: 500;
 }
 @media (max-width:1200px){
-    /* .container{
-        max-width: 970px;
-    } */
+    .nav-links-container ul li a{
+        display: none;
+    }
 }
 @media (max-width:992px){
-    /* .container{
-        max-width: 750px;
-    } */
 }
-@media (max-width:767px){
-    /* .container{
-        max-width: none;
-    } */
-    
+@media (max-width:767px){  
 }
 html, body{
     scroll-behavior: smooth;
 }
+.container{
+    position: relative;
+}
+/* navbar  */
+
+
 .navbar{
     width: 100vw;
     display: flex;
@@ -38,6 +37,9 @@ html, body{
 .nav-logo{
     width: 130px;
     padding: 3px 0 ;
+}
+.nav-links-container{
+    display: flex;
 }
 .nav-links-container ul{
     display: flex;
@@ -60,8 +62,22 @@ a{
     text-decoration: none;
     color: black;
 }
+.menu{
+    padding: 10px 15px;
+    border-radius: 6px;
+    color: black;
+    border: 0;
+    background-color: transparent;
+    font-size: 16px
+}
+.menu:hover{
+    background-color: rgb(51, 51, 51, 0.15);
+    cursor: pointer;
+}
+
+/* homepage  */
+
 .homepage-hero{
-    background-image: url(./content/model3.jpg);
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -70,6 +86,39 @@ a{
     justify-content: space-around;
     align-items: center;
     position: relative;
+    z-index: 999;
+}
+#homepage1{
+    background-image: url(./content/model3.jpg);
+}
+#homepage2{
+    background-image: url(./content/modely.jpg);
+}
+#homepage3{
+    background-image: url(./content/models.jpg);
+}
+#homepage4{
+    background-image: url(./content/modelx.jpg);
+}
+#homepage5{
+    background-image: url(./content/solarpanels.jpg);
+}
+#homepage6{
+    background-image: url(./content/solarroof.jpg);
+}
+#homepage6 .homepage-text-container{
+    padding-top: 50px;
+}
+#homepage7{
+    background-image: url(./content/accessories.jpg);
+    position: relative;
+}
+#homepage7 > .homepage-text-container{
+    color: black;
+}
+#homepage7 .homepage-text-container a{
+    color: black;
+    border-bottom: 1px solid black;
 }
 .homepage-title{
     font-size: 48px;
@@ -187,4 +236,22 @@ a{
 
 .downarrow:hover{
     cursor: pointer;
+}
+.footer-container{
+    position: absolute;
+    bottom: 0;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.footer-container ul{
+    display: flex;
+    gap: 10px;
+}
+.footer-container ul li a{
+    color: white;
 }

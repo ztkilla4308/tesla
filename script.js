@@ -38,6 +38,12 @@ homepages.forEach((elem) => {
   })
 })
 
-function example() {
-  console.log('bang')
+function scrollInto(x) {
+  let z = document.querySelector(x)
+  const y = z.getBoundingClientRect().top + window.scrollY
+  window.scroll({
+    top: y,
+    behavior: 'smooth',
+    duration: 400,
+  })
 }
