@@ -10,6 +10,9 @@
     .nav-links-container ul li a{
         display: none;
     }
+    .button-container{
+        flex-direction: column;
+    }
 }
 @media (max-width:992px){
 }
@@ -17,6 +20,7 @@
 }
 html, body{
     scroll-behavior: smooth;
+    width: 100%;
 }
 .container{
     position: relative;
@@ -113,12 +117,20 @@ a{
     background-image: url(./content/accessories.jpg);
     position: relative;
 }
-#homepage7 > .homepage-text-container{
+#homepage7  .homepage-text-container{
     color: black;
 }
 #homepage7 .homepage-text-container a{
     color: black;
     border-bottom: 1px solid black;
+}
+.homepage-inner{
+    height: 100%;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 50px;
 }
 .homepage-title{
     font-size: 48px;
@@ -238,15 +250,10 @@ a{
     cursor: pointer;
 }
 .footer-container{
-    position: absolute;
-    bottom: 0;
-    z-index: 9999;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
+    bottom: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute
 }
 .footer-container ul{
     display: flex;
